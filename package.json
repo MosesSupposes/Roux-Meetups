@@ -4,7 +4,7 @@
   "description": "A multi-featured web app built with Express.js",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app/app"
+    "start": "nodemon -e css,ejs,js,json --watch app app/app"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/MosesSupposes/Roux-Meetups#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "reload": "^1.1.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
