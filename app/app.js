@@ -1,11 +1,26 @@
+const datafile = require('./data/data.json');
 const express = require('express');
-const app = express()
+const app = express();
 
-const server = app.listen(3000, () => {
-    console.log('Listening on port 3000');
-})
+app.set('port', process.env.PORT || 3000);
 
 app.get('/', (req,res) => {
-    res.send('<h1>Roux Academy Meetups</h1>');
+    let info = '';
+    datafile.speakers.forEach(item => {
+        info += `
+        <li>
+            <h2>${item.name}</h2>
+            <p>${item.summary}</p>
+        </li>
+        `
+    }); 
+    res.send(`
+        <h1>Roux Academy Meetups</h1>
+        ${info}
+    `);
 });
+
+const server = app.listen(app.get('port'), () => {
+    console.log(`Listening on port ${app.get('port')}`);
+})
 
