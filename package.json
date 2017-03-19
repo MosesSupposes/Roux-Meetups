@@ -1,0 +1,22 @@
+{
+  "name": "roux-meetups",
+  "version": "1.0.0",
+  "description": "A multi-featured web app built with Express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MosesSupposes/Roux-Meetups.git"
+  },
+  "author": "Moses A. Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MosesSupposes/Roux-Meetups/issues"
+  },
+  "homepage": "https://github.com/MosesSupposes/Roux-Meetups#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
