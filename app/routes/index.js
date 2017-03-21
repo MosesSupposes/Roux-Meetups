@@ -4,6 +4,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     let data = req.app.get('appData');
     let pagePhotos = [];
+    let pageSpeakers = data.speakers;
 
     // Combine images of all speakers into a single array(pagePhots).
     data.speakers.forEach(item => pagePhotos = pagePhotos.concat(item.artwork))
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
     res.render('index', {
         pageTitle: 'Home',
         artwork: pagePhotos,
+        speakers: pageSpeakers,
         pageID: 'home'
     });
 });
